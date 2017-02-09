@@ -1,0 +1,30 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "49b55541-6b0d-4cc9-8b54-34d7e0f9db02"
+  core:
+    autoHideMenuBar: true
+    telemetryConsent: "limited"
+    themes: [
+      "atom-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontSize: 11
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "cc43c9db-84c3-485b-5e74-93ef891f7fe4"
+  "git-plus":
+    general:
+      _analyticsUserId: "2ea1557f-57c5-4687-b6a1-72835482b697"
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    eslintrcPath: "c:\\Users\\jpitkin\\.atom\\eslintglobal\\standards\\.eslintrc.js"
+    useGlobalEslint: true
+  "vim-mode-plus":
+    highlightSearch: true
+    startInInsertMode: true
+    useClipboardAsDefaultRegister: true
+  welcome:
+    showOnStartup: false

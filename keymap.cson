@@ -1,0 +1,63 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/customizing-atom#customizing-key-bindings
+# * https://atom.io/docs/latest/advanced/keymaps
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it here:
+# https://github.com/bevry/cson#what-is-cson
+# '.platform-win32 .workspace .editor:not(.mini) atom-text-editor.vim-mode:not(.insert-mode)':
+#   'ctrl-k': 'ctrl-dir-scroll:scroll-up'
+#   'ctrl-j': 'ctrl-dir-scroll:scroll-down'
+'.platform-win32 atom-text-editor':
+  'ctrl-shift-P': 'symbols-view:toggle-file-symbols'
+
+'.platform-win32, .platform-win32 .command-palette atom-text-editor':
+  'ctrl-shift->': 'command-palette:toggle'
+  'ctrl-.': 'key-peek:toggle'
+
+
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  ': q': 'tabs:close-tab'
+  ': o': 'tree-view:toggle-focus'
+  ':': 'command-palette:toggle'
+  '\\': 'vim-mode:move-to-first-character-of-line'
+  'q' : 'cursor-history:prev-within-editor'
+  'Q' : 'cursor-history:next-within-editor'
+
+'.platform-win32 atom-text-editor.vim-mode:not(.insert-mode)':
+  'ctrl-p': 'clipboard-plus:toggle'
+
+"atom-workspace":
+  "ctrl-tab": "tab-switcher:next"
+  "ctrl-tab ^ctrl": "unset!"
+  "ctrl-shift-tab": "tab-switcher:previous"
+  "ctrl-shift-tab ^ctrl": "unset!"
+
+"ol.tab-switcher-tab-list":
+  "^ctrl": "tab-switcher:select"
+  "^shift": "tab-switcher:select"
+  "ctrl-up": "tab-switcher:previous"
+  "ctrl-down": "tab-switcher:next"
+  "ctrl-escape": "tab-switcher:cancel"
+  "ctrl-n": "tab-switcher:next"
+  "ctrl-p": "tab-switcher:previous"
+  "ctrl-w": "tab-switcher:close"
+  "ctrl-s": "tab-switcher:save"
