@@ -33,16 +33,18 @@
   'ctrl-shift->': 'command-palette:toggle'
   'ctrl-.': 'key-peek:toggle'
 
+# '.vim-mode-plus'
 
-'atom-text-editor.vim-mode:not(.insert-mode)':
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   ': q': 'tabs:close-tab'
-  ': o': 'tree-view:toggle-focus'
+  ': w' : 'core:save tabs:close-tab'
+  ': o': 'advanced-open-file:toggle'
   ':': 'command-palette:toggle'
   '\\': 'vim-mode:move-to-first-character-of-line'
   'q' : 'cursor-history:prev-within-editor'
   'Q' : 'cursor-history:next-within-editor'
 
-'.platform-win32 atom-text-editor.vim-mode:not(.insert-mode)':
+'.platform-win32 atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'ctrl-p': 'clipboard-plus:toggle'
 
 "atom-workspace":

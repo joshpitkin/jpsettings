@@ -5,6 +5,7 @@ storage
 .apm
 .node-gyp
 .npm
+node_modules
 packages
 recovery
 eslintglobal
