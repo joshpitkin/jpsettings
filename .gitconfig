@@ -1,0 +1,11 @@
+[core]
+    editor = vim
+[user]
+    name = Josh Pitkin (jpitkin) [IMFT]
+    email = jpitkin@micron.com
+[http]
+    proxy = http://proxy-web.micron.com:80
+[https]
+    proxy = http://proxy-web.micron.com:80
+[url "http://"]
+	insteadOf = git://
