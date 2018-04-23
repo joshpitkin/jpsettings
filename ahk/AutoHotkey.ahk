@@ -36,7 +36,7 @@ Capslock::Esc
 !a::ToggleWinMinimize("- Atom","")
 !d::ToggleWinMinimize("Developer Tools - ","")
 !x::ToggleWinMinimize("xplorer","Internet Explorer")
-^!a::ToggleWinMinimize("APF Formatter","")
+^!c::ToggleWinMinimize("APF Formatter","")
 ^!s::ToggleWinMinimize("Google Chrome","")
 ^!n::ToggleWinMinimize("- OneNote","")
 #y::send ^!+3
@@ -57,12 +57,22 @@ Thanks -Josh
 )
 return
 
+#IfWinActive, ahk_class CabinetWClass ; for use in explorer.
+^!h::
+Send ^l
+ControlGetText, address , edit1,ahk_class CabinetWClass
+MsgBox %address%
+Run, C:\Program Files\ConEmu\ConEmu64.exe, %address%
+return
+#IfWinActive
+
 #IfWinActive ahk_exe Ssms.exe
 !S::send,
 (
 select top 100 * from
 )
 return
+
 
 ; Note: From now on whenever you run AutoHotkey directly, this script
 ; will be loaded.  So feel free to customize it to suit your needs.
