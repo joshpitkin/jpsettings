@@ -1,11 +1,21 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "ctrl+`",
+    "key": "ctrl+l k",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "ctrl+`",
+    "key": "ctrl+l k",
     "command": "-workbench.action.terminal.toggleTerminal"
-  }
+  },
+  // Toggle between terminal and editor focus
+  { "key": "ctrl+l l", "command": "workbench.action.terminal.focus"},
+  { "key": "ctrl+l 1", "command": "workbench.action.terminal.focusAtIndex1"},
+  { "key": "ctrl+l 2", "command": "workbench.action.terminal.focusAtIndex2"},
+  { "key": "ctrl+l 3", "command": "workbench.action.terminal.focusAtIndex3"},
+  { "key": "ctrl+l 4", "command": "workbench.action.terminal.focusAtIndex4"},
+  { "key": "ctrl+l 5", "command": "workbench.action.terminal.focusAtIndex5"},
+  { "key": "ctrl+l n", "command": "workbench.action.terminal.new" },
+  { "key": "ctrl+l k", "command": "workbench.action.terminal.kill", "when": "terminalFocus"},
+  { "key": "ctrl+l", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
 ]

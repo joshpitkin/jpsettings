@@ -8,11 +8,69 @@
     "vim.useCtrlKeys": false,
     "vim.hlsearch": true,
     "vim.easymotion": true,
+    "vim.statusBarColorControl": true,
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [ 
+        { 
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [":"],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "commands": [
+                "workbench.action.openNextRecentlyUsedEditorInGroup"
+            ]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "commands": [
+                "workbench.action.openPreviousRecentlyUsedEditorInGroup"
+            ]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p",
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
     "files.autoSave": "onWindowChange",
     "editor.minimap.enabled": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.iconTheme": "vscode-icons",
     "vim.foldfix": true,
     "http.proxy": "http://proxy:8080",
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    }
 }
