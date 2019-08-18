@@ -1,21 +1,16 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-  {
-    "key": "ctrl+l k",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "ctrl+l k",
-    "command": "-workbench.action.terminal.toggleTerminal"
-  },
-  // Toggle between terminal and editor focus
-  { "key": "ctrl+l l", "command": "workbench.action.terminal.focus"},
-  { "key": "ctrl+l 1", "command": "workbench.action.terminal.focusAtIndex1"},
-  { "key": "ctrl+l 2", "command": "workbench.action.terminal.focusAtIndex2"},
-  { "key": "ctrl+l 3", "command": "workbench.action.terminal.focusAtIndex3"},
-  { "key": "ctrl+l 4", "command": "workbench.action.terminal.focusAtIndex4"},
-  { "key": "ctrl+l 5", "command": "workbench.action.terminal.focusAtIndex5"},
-  { "key": "ctrl+l n", "command": "workbench.action.terminal.new" },
-  { "key": "ctrl+l k", "command": "workbench.action.terminal.kill", "when": "terminalFocus"},
-  { "key": "ctrl+l", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
+  { "key": "ctrl+l", "command": "workbench.action.focusActiveEditorGroup"},
+  { "key": "ctrl+k h", "command": "workbench.action.focusLeftGroup" },
+  { "key": "ctrl+k j", "command": "workbench.action.focusAboveGroup" },
+  { "key": "ctrl+k k", "command": "workbench.action.focusBelowGroup" },
+  { "key": "ctrl+k l", "command": "workbench.action.focusRightGroup" },
+  { "key": "ctrl+shift+k h", "command": "workbench.action.moveActiveEditorGroupLeft" },
+  { "key": "ctrl+shift+k j", "command": "workbench.action.moveActiveEditorGroupDown" },
+  { "key": "ctrl+shift+k k", "command": "workbench.action.moveActiveEditorGroupUp" },
+  { "key": "ctrl+shift+k l", "command": "workbench.action.moveActiveEditorGroupRight" },
+  { "key": "ctrl+shift+k s", "command": "workbench.action.moveEditorToNextGroup" },
+  { "key": "ctrl+shift+k v", "command": "workbench.action.moveEditorToPreviousGroup" },
+  { "key": "ctrl+k s", "command": "workbench.action.splitEditorDown" },
+  { "key": "ctrl+k v", "command": "workbench.action.splitEditorRight" },
 ]

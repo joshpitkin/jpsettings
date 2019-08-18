@@ -46,7 +46,31 @@
             "commands": [
                 "workbench.action.focusRightGroup"
             ]
-        }
+        },
+        {
+            "before": ["g", "h"],
+            "commands": [
+                "cursorHome",
+            ]
+        },
+        {
+            "before": ["g", "j"],
+            "commands": [
+                "cursorBottom",
+            ]
+        },
+        {
+            "before": ["g", "k"],
+            "commands": [
+                "cursorTop",
+            ]
+        },
+        {
+            "before": ["g", "l"],
+            "commands": [
+                "cursorEnd",
+            ]
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -72,5 +96,14 @@
         "statusBar.background": "#005f5f",
         "statusBar.noFolderBackground": "#005f5f",
         "statusBar.debuggingBackground": "#005f5f"
-    }
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "python.jediEnabled": false
 }
