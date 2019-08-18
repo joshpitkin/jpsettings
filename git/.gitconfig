@@ -1,0 +1,46 @@
+[user]
+    name = Josh Pitkin (jpitkin) [IMFT]
+    email = jpitkin@micron.com
+[url "http://"]
+	insteadOf = git://
+[alias]
+ # logs
+ l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+ lg='git log --graph --oneline --decorate --all'
+
+ a = add
+ ap = add -p
+ aa = add .
+ ac = !git add -A && git commit -m
+ c = commit --verbose
+ ca = commit -a --verbose
+ cm = commit -m
+ cam = commit -a -m
+ m = commit --amend --verbose
+    
+ d = diff
+ ds = diff --stat
+ dc = diff --cached
+ a = add
+ ap = add -p
+ aa = add .
+ c = commit --verbose
+ ca = commit -a --verbose
+ cm = commit -m
+ cam = commit -a -m
+ m = commit --amend --verbose
+ po = push -u origin --all 
+ pl = pull 
+    
+ d = diff
+ ds = diff --stat
+ dc = diff --cached
+
+ s = status -s
+ co = checkout
+ cob = checkout -b
+ # list branches sorted by last modified
+ b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+ # list aliases
+ la = "!git config -l | grep alias | cut -c 7-"
