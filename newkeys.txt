@@ -1,0 +1,48 @@
+New keys
+  { "key": "alt+z", "command": "toggle word wrap"},
+  { "key": "ctrl+0", "command": "workbench.action.focusSideBar" },
+  { "key": "ctrl+b", "command": "workbench.action.toggleSidebarVisibility" },
+  { "key": "ctrl+k z", "command": "workbench.action.toggleZenMode" },
+  { "key": "escape escape", "command": "workbench.action.exitZenMode", "when": "inZenMode" },
+  { "key": "ctrl+\\", "command": "workbench.action.splitEditor" },
+  { "key": "ctrl+\\", "command": "workbench.action.terminal.split", "when": "terminalFocus" },
+  { "key": "ctrl+k down", "command": "workbench.action.moveActiveEditorGroupDown" },
+  { "key": "ctrl+k left", "command": "workbench.action.moveActiveEditorGroupLeft" },
+  { "key": "ctrl+k right", "command": "workbench.action.moveActiveEditorGroupRight" },
+  { "key": "ctrl+k up", "command": "workbench.action.moveActiveEditorGroupUp" },
+  { "key": "ctrl+l k", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "ctrl+l k", "command": "-workbench.action.terminal.toggleTerminal" },
+  // Toggle between terminal and editor focus
+  { "key": "ctrl+l l", "command": "workbench.action.terminal.focus"},
+  { "key": "ctrl+l 1", "command": "workbench.action.terminal.focusAtIndex1"},
+  { "key": "ctrl+l 2", "command": "workbench.action.terminal.focusAtIndex2"},
+  { "key": "ctrl+l 3", "command": "workbench.action.terminal.focusAtIndex3"},
+  { "key": "ctrl+l 4", "command": "workbench.action.terminal.focusAtIndex4"},
+  { "key": "ctrl+l 5", "command": "workbench.action.terminal.focusAtIndex5"},
+  { "key": "ctrl+l n", "command": "workbench.action.terminal.new" },
+  { "key": "ctrl+l k", "command": "workbench.action.terminal.kill", "when": "terminalFocus"},
+  { "key": "ctrl+l", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
+  alt+<left arrow>  focus left terminal
+  alt+<right arrow>  focus right terminal
+
+"vim.normalModeKeyBindingsNonRecursive": [ 
+  { "before": [":"], "commands": [ "workbench.action.showCommands", ] },
+  { "before": ["<leader>", "j"], "commands": [ "workbench.action.openNextRecentlyUsedEditorInGroup" ] },
+  { "before": ["<leader>", "k"], "commands": [ "workbench.action.openPreviousRecentlyUsedEditorInGroup" ] },
+  { "before": ["<leader>", "h"], "commands": [ "workbench.action.focusLeftGroup" ] },
+  { "before": ["<leader>", "l"], "commands": [ "workbench.action.focusRightGroup" ] }
+  // EasyMotion
+  <leader><leader> s <char>	Search character
+  <leader><leader> f <char>	Find character forwards
+  <leader><leader> F <char>	Find character backwards
+  <leader><leader> t <char>	Til character forwards
+  <leader><leader> T <char>	Til character backwards
+  <leader><leader> w	Start of word forwards
+  <leader><leader> b	Start of word backwards
+  <leader><leader> l	matches beginning & ending of word, camelCase, after _ and after # forwards
+  <leader><leader> h	matches beginning & ending of word, camelCase, after _ and after # backwards
+  <leader><leader> e	End of word forwards
+  <leader><leader> ge	End of word backwards
+  <leader><leader> j	Start of line forwards
+  <leader><leader> k	Start of line backwards
+

@@ -1,14 +1,15 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.tabSize": 2,
-    "vsicons.projectDetection.autoReload": true,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "git.confirmSync": false,
+    "breadcrumbs.enabled": true,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
     "vim.hlsearch": true,
     "vim.easymotion": true,
-    "vim.statusBarColorControl": true,
     "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [ 
         { 
@@ -100,22 +101,19 @@
     "files.autoSave": "onWindowChange",
     "editor.minimap.enabled": false,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "vscode-icons",
     "vim.foldfix": true,
-    "http.proxy": "http://proxy:8080",
-    "window.zoomLevel": 0,
+    "http.proxy": "http://proxy-web.micron.com:80",
+    "typescript.tsserver.log": "terse",
+    "window.zoomLevel": -1,
     "workbench.colorCustomizations": {
         "statusBar.background": "#005f5f",
         "statusBar.noFolderBackground": "#005f5f",
         "statusBar.debuggingBackground": "#005f5f"
     },
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "python.jediEnabled": false
+    "html.format.wrapAttributes": "force-aligned",
+    "explorer.confirmDragAndDrop": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.detectIndentation": false,
+    "explorer.confirmDelete": false,
+    "editor.renderWhitespace": "all"
 }

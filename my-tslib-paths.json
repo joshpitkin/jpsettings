@@ -1,0 +1,168 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@omelek/storm": [
+        "projects/omelek/storm/public_api"
+      ],
+      "@omelek/storm/*": [
+        "projects/omelek/storm/*"
+      ],
+      "@omelek/etoolmon": [
+        "projects/omelek/etoolmon/src/public_api"
+      ],
+      "@omelek/etoolmon/*": [
+        "projects/omelek/etoolmon/src/*"
+      ],
+      "@omelek/etnotesearch": [
+        "projects/omelek/etnotesearch/public_api"
+      ],
+      "@omelek/etnotesearch/*": [
+        "projects/omelek/etnotesearch/*"
+      ],
+      "@omelek/ebit": [
+        "projects/omelek/ebit/src/public_api"
+      ],
+      "@omelek/ebit/*": [
+        "projects/omelek/ebit/src/*"
+      ],
+      "@omelek/ng-equipgantt-lib": [
+        "projects/omelek/ng-equipgantt-lib/public_api"
+      ],
+      "@omelek/ng-equipgantt-lib/*": [
+        "projects/omelek/ng-equipgantt-lib/*"
+      ],
+      "@omelek/sdoa": [
+        "projects/omelek/sdoa/public_api"
+      ],
+      "@omelek/sdoa/*": [
+        "projects/omelek/sdoa/*"
+      ],
+      "@omelek/site-awards": [
+        "projects/omelek/site-awards/src/public_api"
+      ],
+      "@omelek/site-awards/*": [
+        "projects/omelek/site-awards/src/*"
+      ],
+      "@omelek/install-calendar": [
+        "projects/omelek/install-calendar/src/public_api"
+      ],
+      "@omelek/install-calendar/*": [
+        "projects/omelek/install-calendar/src/*"
+      ],
+      "@omelek/swrreport": [
+        "projects/omelek/swrreport/src/public_api"
+      ],
+      "@omelek/swrreport/*": [
+        "projects/omelek/swrreport/src/*"
+      ],
+      "@omelek/prm-reports": [
+        "projects/omelek/prm-reports/src/public_api"
+      ],
+      "@omelek/prm-reports/*": [
+        "projects/omelek/prm-reports/src/*"
+      ],
+      "@omelek/tpm-sixs-audit": [
+        "projects/omelek/tpm-sixs-audit/src/public_api"
+      ],
+      "@omelek/tpm-sixs-audit/*": [
+        "projects/omelek/tpm-sixs-audit/src/*"
+      ],
+      "@omelek/pm-bill-of-materials": [
+        "projects/omelek/pm-bill-of-materials/src/public_api"
+      ],
+      "@omelek/pm-bill-of-materials/*": [
+        "projects/omelek/pm-bill-of-materials/src/*"
+      ],
+      "@omelek/gcp-push": [
+        "projects/omelek/gcp-push/src/public_api"
+      ],
+      "@omelek/gcp-push/*": [
+        "projects/omelek/gcp-push/src/*"
+      ],
+      "@omelek/oeeui": [
+        "projects/omelek/oeeui/public_api"
+      ],
+      "@omelek/oeeui/*": [
+        "projects/omelek/oeeui/*"
+      ],
+      "@omelek/amp-projects/*": [
+        "projects/omelek/amp-projects/src/*"
+      ],
+      "@omelek/amp-projects": [
+        "projects/omelek/amp-projects/src/public_api"
+      ],
+      "@omelek/probe-floorview/*": [
+        "projects/omelek/probe-floorview/src/*"
+      ],
+      "@omelek/probe-floorview": [
+        "projects/omelek/probe-floorview/src/public_api"
+      ],
+      "@omelek/lot-health-tracker/*": [
+        "projects/omelek/lot-health-tracker/src/*"
+      ],
+      "@omelek/lot-health-tracker": [
+        "projects/omelek/lot-health-tracker/src/public_api"
+      ],
+      "@omelek/corrective-action-feed": [
+        "projects/omelek/corrective-action-feed/public_api"
+      ],
+      "@omelek/corrective-action-feed/*": [
+        "projects/omelek/corrective-action-feed/*"
+      ],
+      "@omelek/autopor-api": [
+        "projects/omelek/autopor-api/public_api"
+      ],
+      "@omelek/autopor-api/*": [
+        "projects/omelek/autopor-api/*"
+      ],
+      "@omelek/platform-core-base": [
+        "projects/omelek/platform-core-base/src/public_api"
+      ],
+      "@omelek/platform-core-base/*": [
+        "projects/omelek/platform-core-base/src/*"
+      ],
+      "@omelek/platform-core-admin": [
+        "projects/omelek/platform-core-admin/src/public_api"
+      ],
+      "@omelek/platform-core-admin/*": [
+        "projects/omelek/platform-core-admin/src/*"
+      ],
+      "@omelek/platform-chartjs": [
+        "projects/omelek/platform-chartjs/src/public_api"
+      ],
+      "@omelek/platform-chartjs/*": [
+        "projects/omelek/platform-chartjs/src/*"
+      ],
+      "@omelek/platform-table": [
+        "projects/omelek/platform-table/src/public_api"
+      ],
+      "@omelek/platform-table/*": [
+        "projects/omelek/platform-table/src/*"
+      ],
+      "@omelek/platform-table-x": [
+        "projects/omelek/platform-table-x/src/public_api"
+      ],
+      "@omelek/platform-table-x/*": [
+        "projects/omelek/platform-table-x/src/*"
+      ],
+      "@omelek/platform-multiselect": [
+        "projects/omelek/platform-multiselect/src/public_api"
+      ],
+      "@omelek/platform-multiselect/*": [
+        "projects/omelek/platform-multiselect/src/*"
+      ],
+      "@omelek/platform-highchart": [
+        "projects/omelek/platform-highchart/src/public_api"
+      ],
+      "@omelek/platform-highchart/*": [
+        "projects/omelek/platform-highchart/src/*"
+      ],
+      "web-platform-library": [
+        "projects/web-platform-library/src/public_api"
+      ],
+      "web-platform-library/*": [
+        "projects/web-platform-library/src/*"
+      ]
+    }
+  }
+}

@@ -13,4 +13,7 @@
   { "key": "ctrl+shift+k v", "command": "workbench.action.moveEditorToPreviousGroup" },
   { "key": "ctrl+k s", "command": "workbench.action.splitEditorDown" },
   { "key": "ctrl+k v", "command": "workbench.action.splitEditorRight" },
+  { "key": "ctrl+]", "command": "workbench.files.action.collapseExplorerFolders", "when": "explorerViewletFocus && explorerViewletVisible" },
+  { "key": "ctrl+alt+l", "command": "-push.download", "when": "editorTextFocus" },
+  { "key": "ctrl+alt+l", "command": "-bookmarks.jumpToNext", "when": "editorTextFocus" }
 ]
