@@ -49,12 +49,6 @@
             ]
         },
         {
-            "before": ["g", "h"],
-            "commands": [
-                "cursorHome",
-            ]
-        },
-        {
             "before": ["g", "j"],
             "commands": [
                 "cursorBottom",
@@ -83,6 +77,21 @@
             "commands": [
                 "bookmarks.list"
             ]
+        },
+        {
+            "before": ["Y"],
+            "after": [
+                "y",
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "L",
+            ],
+            "after": [
+                "$"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -95,6 +104,14 @@
                 "g",
                 "v",
                 "y"
+            ]
+        },
+        {
+            "before": [
+                "L",
+            ],
+            "after": [
+                "$"
             ]
         }
     ],
