@@ -5,7 +5,9 @@
     "javascript.implicitProjectConfig.experimentalDecorators": true,
     "git.confirmSync": false,
     "breadcrumbs.enabled": true,
+    "html.mirrorCursorOnMatchingTag": false,
     "vim.disableAnnoyingNeovimMessage": true,
+    "zentabs.maximumOpenedTabs": 10,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
     "vim.hlsearch": true,
@@ -48,12 +50,13 @@
                 "workbench.action.focusRightGroup"
             ]
         },
-        {
-            "before": ["g", "h"],
-            "commands": [
-                "cursorHome",
-            ]
-        },
+        // keep gh for the tooltip toggle
+        // {
+        //     "before": ["g", "h"],
+        //     "commands": [
+        //         "cursorHome",
+        //     ]
+        // },
         {
             "before": ["g", "j"],
             "commands": [
@@ -115,5 +118,7 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.detectIndentation": false,
     "explorer.confirmDelete": false,
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "todo-tree.highlights.enabled": true,
+    "editor.multiCursorModifier": "ctrlCmd"
 }

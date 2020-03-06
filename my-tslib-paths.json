@@ -1,6 +1,12 @@
-{
+
   "compilerOptions": {
     "paths": {
+      "@omelek/demo": [
+        "projects/omelek/demo/public_api"
+      ],
+      "@omelek/demo/*": [
+        "projects/omelek/demo/*"
+      ],
       "@omelek/storm": [
         "projects/omelek/storm/public_api"
       ],
@@ -37,6 +43,12 @@
       "@omelek/sdoa/*": [
         "projects/omelek/sdoa/*"
       ],
+      "@omelek/blueprint": [
+        "projects/omelek/blueprint/public_api"
+      ],
+      "@omelek/blueprint/*": [
+        "projects/omelek/blueprint/*"
+      ],
       "@omelek/site-awards": [
         "projects/omelek/site-awards/src/public_api"
       ],
@@ -54,6 +66,12 @@
       ],
       "@omelek/swrreport/*": [
         "projects/omelek/swrreport/src/*"
+      ],
+      "@omelek/r2rsetup": [
+        "projects/omelek/r2rsetup/src/public_api"
+      ],
+      "@omelek/r2rsetup/*": [
+        "projects/omelek/r2rsetup/src/*"
       ],
       "@omelek/prm-reports": [
         "projects/omelek/prm-reports/src/public_api"
@@ -90,6 +108,12 @@
       ],
       "@omelek/amp-projects": [
         "projects/omelek/amp-projects/src/public_api"
+      ],
+      "@omelek/quantum/*": [
+        "projects/omelek/quantum/src/*"
+      ],
+      "@omelek/quantum": [
+        "projects/omelek/quantum/src/public-api"
       ],
       "@omelek/probe-floorview/*": [
         "projects/omelek/probe-floorview/src/*"
@@ -162,7 +186,217 @@
       ],
       "web-platform-library/*": [
         "projects/web-platform-library/src/*"
-      ]
+      ],
+      "@omelek/fab-common": [
+          "projects/omelek/fab-common/src/public_api"
+      ],
+      "@omelek/fab-common/*": [
+          "projects/omelek/fab-common/src/*"
+      ],
+      "@omelek/storm": [
+          "projects/omelek/storm/public_api"
+      ],
+      "@omelek/storm/*": [
+          "projects/omelek/storm/*"
+      ],
+      "@omelek/flow-doc": [
+          "projects/omelek/flow-doc/src/public_api"
+      ],
+      "@omelek/flow-doc/*": [
+          "projects/omelek/flow-doc/src/*"
+      ],
+      "@omelek/image-analytics-web": [
+          "projects/omelek/image-analytics-web/src/public_api"
+      ],
+      "@omelek/image-analytics-web/*": [
+          "projects/omelek/image-analytics-web/src/*"
+      ],
+      "@omelek/robot-arm": [
+          "projects/omelek/robot-arm-ui/src/public_api"
+      ],
+      "@omelek/robot-arm/*": [
+          "projects/omelek/robot-arm-ui/src/*"
+      ],
+      "@omelek/lot-comment": [
+          "projects/omelek/lot-comment/src/public-api"
+      ],
+      "@omelek/lot-comment/*": [
+          "projects/omelek/lot-comment/src/*"
+      ],
+      "@omelek/fabigniter": [
+        "projects/omelek/fabigniter/public_api"
+      ],
+      "@omelek/fabigniter/*": [
+        "projects/omelek/fabigniter/*"
+      ],
+      "@omelek/autopor-api": [
+        "projects/omelek/autopor-api/public_api"
+      ],
+      "@omelek/autopor-api/*": [
+        "projects/omelek/autopor-api/*"
+      ],
+      "@omelek/gcp-info/*": [
+        "projects/omelek/gcp-info/src/*"
+      ],
+      "@omelek/gcp-info": [
+        "projects/omelek/gcp-info/src/public_api"
+      ],
+      "@omelek/misprobe/*": [
+        "projects/omelek/misprobe/src/*"
+      ],
+      "@omelek/misprobe": [
+        "projects/omelek/misprobe/src/public_api"
+      ],
+      "@omelek/misprobe/*": [
+        "projects/omelek/misprobe/src/*"
+      ],
+      "@omelek/misprobe": [
+        "projects/omelek/misprobe/src/public_api"
+      ],
+      "@omelek/ngx-sched-config-interface/*": [
+        "projects/omelek/ngx-sched-config-interface/src/*"
+      ],
+      "@omelek/ngx-sched-config-interface": [
+        "projects/omelek/ngx-sched-config-interface/src/public_api"
+      ],
+      "@omelek/prober/*": [
+        "projects/omelek/prober/src/*"
+      ],
+      "@omelek/prober": [
+        "projects/omelek/prober/src/public_api"
+      ],
+      "@omelek/rpacalc/*": [
+        "projects/omelek/rpacalc/src/*"
+      ],
+      "@omelek/rpacalc": [
+        "projects/omelek/rpacalc/src/public_api"
+      ],
+      "@omelek/ava47": [
+        "dist/omelek/ava47"
+      ],
+      "@omelek/ava47/*": [
+        "dist/omelek/ava47/*"
+      ],
+      "@omelek/iwr": [
+        "dist/omelek/iwr"
+      ],
+      "@omelek/iwr/*": [
+        "dist/omelek/iwr/*"
+      ],
+      "@omelek/ctflow-lifecycle": [
+        "dist/omelek/ctflow-lifecycle"
+      ],
+      "@omelek/ctflow-lifecycle/*": [
+        "dist/omelek/ctflow-lifecycle/*"
+      ],
+      "@omelek/r2rsetup": [
+        "dist/omelek/r2rsetup"
+      ],
+      "@omelek/r2rsetup/*": [
+        "dist/omelek/r2rsetup/*"
+      ],
+      "@omelek/ava47": [
+        "projects/omelek/ava47/src/public_api"
+      ],
+      "@omelek/ava47/*": [
+        "projects/omelek/ava47/src/*"
+      ],
+      "@omelek/iwr": [
+        "projects/omelek/iwr/src/public_api"
+      ],
+      "@omelek/iwr/*": [
+        "projects/omelek/iwr/src/*"
+      ],
+      "@omelek/ctflow-lifecycle": [
+        "projects/omelek/ctflow-lifecycle/src/public-api"
+      ],
+      "@omelek/ctflow-lifecycle/*": [
+        "projects/omelek/ctflow-lifecycle/src/*"
+      ],
+      "@omelek/r2rsetup": [
+        "projects/omelek/r2rsetup/src/public_api"
+      ],
+      "@omelek/r2rsetup/*": [
+        "projects/omelek/r2rsetup/src/*"
+      ],
+      "@omelek/image-analytics-web": [
+        "dist/omelek/image-analytics-web"
+      ],
+      "@omelek/image-analytics-web/*": [
+        "dist/omelek/image-analytics-web/*"
+      ],
+      "@omelek/storm": [
+        "dist/omelek/storm"
+      ],
+      "@omelek/storm/*": [
+        "dist/omelek/storm/*"
+      ],
+      "@omelek/flow-doc": [
+        "dist/omelek/flow-doc"
+      ],
+      "@omelek/flow-doc/*": [
+        "dist/omelek/flow-doc/*"
+      ],
+      "@omelek/robot-arm": [
+        "dist/omelek/robot-arm"
+      ],
+      "@omelek/robot-arm/*": [
+        "dist/omelek/robot-arm/*"
+      ],
+      "@omelek/lot-comment": [
+        "dist/omelek/lot-comment"
+      ],
+      "@omelek/lot-comment/*": [
+        "dist/omelek/lot-comment/*"
+      ],
+      "@omelek/misprobe": [
+        "dist/omelek/misprobe"
+      ],
+      "@omelek/misprobe/*": [
+        "dist/omelek/misprobe/*"
+      ],
+      "@omelek/prober": [
+        "dist/omelek/prober"
+      ],
+      "@omelek/prober/*": [
+        "dist/omelek/prober/*"
+      ],
+      "@omelek/ngx-sched-config-interface": [
+        "dist/omelek/ngx-sched-config-interface"
+      ],
+      "@omelek/ngx-sched-config-interface/*": [
+        "dist/omelek/ngx-sched-config-interface/*"
+      ],
+      "@omelek/fabigniter": [
+        "dist/omelek/fabigniter"
+      ],
+      "@omelek/fabigniter/*": [
+        "dist/omelek/fabigniter/*"
+      ],
+      "@omelek/autopor-api": [
+        "dist/omelek/autopor-api"
+      ],
+      "@omelek/autopor-api/*": [
+        "dist/omelek/autopor-api/*"
+      ],
+      "@omelek/gcp-info": [
+        "dist/omelek/gcp-info"
+      ],
+      "@omelek/gcp-info/*": [
+        "dist/omelek/gcp-info/*"
+      ],
+      "@omelek/rpacalc": [
+        "dist/omelek/rpacalc"
+      ],
+      "@omelek/rpacalc/*": [
+        "dist/omelek/rpacalc/*"
+      ],
+      "@omelek/ngx-tickets": [
+        "dist/omelek/ngx-tickets"
+      ],
+      "@omelek/ngx-tickets/*": [
+        "dist/omelek/ngx-tickets/*"
+      ],
     }
   }
 }

@@ -2,8 +2,8 @@
 [
   { "key": "ctrl+l", "command": "workbench.action.focusActiveEditorGroup"},
   { "key": "ctrl+k h", "command": "workbench.action.focusLeftGroup" },
-  { "key": "ctrl+k j", "command": "workbench.action.focusAboveGroup" },
-  { "key": "ctrl+k k", "command": "workbench.action.focusBelowGroup" },
+  { "key": "ctrl+k k", "command": "workbench.action.focusAboveGroup" },
+  { "key": "ctrl+k j", "command": "workbench.action.focusBelowGroup" },
   { "key": "ctrl+k l", "command": "workbench.action.focusRightGroup" },
   { "key": "ctrl+shift+k h", "command": "workbench.action.moveActiveEditorGroupLeft" },
   { "key": "ctrl+shift+k j", "command": "workbench.action.moveActiveEditorGroupDown" },
@@ -15,5 +15,7 @@
   { "key": "ctrl+k v", "command": "workbench.action.splitEditorRight" },
   { "key": "ctrl+]", "command": "workbench.files.action.collapseExplorerFolders", "when": "explorerViewletFocus && explorerViewletVisible" },
   { "key": "ctrl+alt+l", "command": "-push.download", "when": "editorTextFocus" },
-  { "key": "ctrl+alt+l", "command": "-bookmarks.jumpToNext", "when": "editorTextFocus" }
+  { "key": "ctrl+alt+l", "command": "-bookmarks.jumpToNext", "when": "editorTextFocus" },
+  { "key": "ctrl+k t", "command": "workbench.action.terminal.focus"},
+  { "key": "ctrl+k t", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"}
 ]
