@@ -12,30 +12,39 @@
 ; launches a web site in the default browser.  The second is Control+Alt+N
 ; and it launches a new Notepad window (or activates an existing one).  To
 ; try out these hotkeys, run AutoHotkey again, which will load this file.
+; # = windows key
+; ^ = ctrl
+; ! = alt
+; + = shift
+
 
 ; #z::Run www.autohotkey.com
-
-; ^!n::
-; IfWinExist Untitled - Notepad
-;	WinActivate
-; else
-; 	Run Notepad
-; return
-;esc::
-;	MsgBox Escape!!!!
-;Return
 
 ^!right:: ;This will disable the effect of Win + ->
 ^!left::  ;This will disable the effect of Win + <-
 ^!down::
 
-Capslock::Esc
+; Capslock::Esc
+
+^SPACE::  Winset, Alwaysontop, , A
 
 !d::ToggleWinMinimize("Developer Tools - ","")
 ^!s::ToggleWinMinimize("Google Chrome","")
-#z::Run % "chrome.exe" ( WinExist("ahk_class Chrome_WidgetWin_1") ? " --new-window" : " ")
+; #z::Run % "chrome.exe" ( WinExist("ahk_class Chrome_WidgetWin_1") ? " --new-window" : " ")
 ^!n::ToggleWinMinimize("- OneNote","")
 #y::send ^!+3
+
+^!l::
+send jpitkin{tab}Y0uv5Y0u21
+return
+
+^!p::
+send Y0uv5Y0u21
+return
+
+^!a::
+send auxitauto{tab}628bXJ@@VaBg
+return
 
 #IfWinActive ahk_exe OUTLOOK.EXE
 ^L::send,
@@ -51,16 +60,6 @@ return
 (
 Thanks -Josh
 )
-return
-#IfWinActive
-
-#IfWinActive ahk_class CabinetWClass ; for use in explorer.
-^!h::
-Send ^l
-ControlGetText, address , edit1,ahk_class CabinetWClass
-; MsgBox %address%
-Run, c:\Program Files\ConEmu\ConEmu64.exe -run cmd -cur_console:d:%address%
-; Run, c:\Program Files\ConEmu\ConEmu64.exe %address%
 return
 #IfWinActive
 
@@ -98,3 +97,29 @@ ToggleWinMinimize(TheWindowTitle,NotWindowTitle)
 	}
 	Return
 }
+
+; hotstrings
+; #Hotstring EndChars -()[]{}:;'"/\,.?!`n `t
+#Hotstring EndChars /\;
+
+:o:btw::by the way
+:o:ga::git add .
+:o:gc::git commit -m "
+:o:gp::git push -u origin HEAD
+:o:ngsl::ng serve libdev --host 0.0.0.0
+:o:ngs::ng serve --host 0.0.0.0
+:o:ngs1::ng serve --host 0.0.0.0 --port 4100
+:o:ocl::oc login https://bo-ose-test.micron.com:8443
+:o:oct::TOKEN=``oc whoami -t``
+:o:octt::echo $TOKEN | docker login --password-stdin -u unused docker-registry-default.bo-ose-test.micron.com
+:o:dri::iteng-docker-dev.boartifactory.micron.com
+:o:dro::docker-registry-default.bo-ose-test.micron.com
+:o:dvp::docker volume prune --force
+:o:dip::docker image prune --force
+:o:dcp::docker container prune --force
+:o:dsp::docker system prune
+:o:dcu::docker-compose -f .devcontainer/docker-compose.yml up -d
+:o:dcd::docker-compose -f .devcontainer/docker-compose.yml down
+:o:de::docker exec -it <container> zsh
+:o:dcb::docker-compose -f docker-compose-build.yml build
+
