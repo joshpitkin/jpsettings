@@ -94,7 +94,7 @@ ToggleWinMinimize(TheWindowTitle,NotWindowTitle)
 :o:gc::git commit -m "
 :o:gp::git push -u origin HEAD
 :o:ngsl::ng serve libdev --host 0.0.0.0
-:o:ngs::ng serve --host 0.0.0.0
+:o:ngs::ng serve --host 0.0.0.0 --hmr
 :o:ngs1::ng serve --host 0.0.0.0 --port 4100
 :o:ocl3::oc login https://bo-ose-test.micron.com:8443
 :o:ocl::oc login https://api.ose-dev45.micron.com:6443
