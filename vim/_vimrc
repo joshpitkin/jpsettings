@@ -1,0 +1,15 @@
+set lines=70 columns=300
+set nu
+colorscheme slate
+set guifont=Consolas:h10:cANSI:qDRAFT
+syntax on
+set splitbelow
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set ignorecase
+set smartcase
+nnoremap <F5> :buffers<CR>:buffer<Space>
+set hidden
+set noswapfile
+set backspace=indent,eol,start
