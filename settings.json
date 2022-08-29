@@ -1,124 +1,239 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.tabSize": 2,
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "javascript.implicitProjectConfig.experimentalDecorators": true,
-    "git.confirmSync": false,
-    "breadcrumbs.enabled": true,
-    "html.mirrorCursorOnMatchingTag": false,
-    "vim.disableAnnoyingNeovimMessage": true,
-    "zentabs.maximumOpenedTabs": 10,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": false,
-    "vim.hlsearch": true,
-    "vim.easymotion": true,
-    "vim.leader": "<space>",
-    "vim.insertModeKeyBindings": [ 
-        { 
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [":"],
-            "commands": [
-                "workbench.action.showCommands",
-            ]
-        },
-        {
-            "before": ["<leader>", "j"],
-            "commands": [
-                "workbench.action.openNextRecentlyUsedEditorInGroup"
-            ]
-        },
-        {
-            "before": ["<leader>", "k"],
-            "commands": [
-                "workbench.action.openPreviousRecentlyUsedEditorInGroup"
-            ]
-        },
-        {
-            "before": ["<leader>", "h"],
-            "commands": [
-                "workbench.action.focusLeftGroup"
-            ]
-        },
-        {
-            "before": ["<leader>", "l"],
-            "commands": [
-                "workbench.action.focusRightGroup"
-            ]
-        },
-        // keep gh for the tooltip toggle
-        // {
-        //     "before": ["g", "h"],
-        //     "commands": [
-        //         "cursorHome",
-        //     ]
-        // },
-        {
-            "before": ["g", "j"],
-            "commands": [
-                "cursorBottom",
-            ]
-        },
-        {
-            "before": ["g", "k"],
-            "commands": [
-                "cursorTop",
-            ]
-        },
-        {
-            "before": ["g", "l"],
-            "commands": [
-                "cursorEnd",
-            ]
-        },
-        {
-            "before": ["<leader>", "m"],
-            "commands": [
-                "bookmarks.toggle"
-            ]
-        },
-        {
-            "before": ["<leader>", "b"],
-            "commands": [
-                "bookmarks.list"
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "p",
-            ],
-            "after": [
-                "p",
-                "g",
-                "v",
-                "y"
-            ]
-        }
-    ],
-    "files.autoSave": "onWindowChange",
-    "editor.minimap.enabled": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "vim.foldfix": true,
-    "http.proxy": "http://proxy-web.micron.com:80",
-    "typescript.tsserver.log": "terse",
-    "window.zoomLevel": -1,
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#005f5f",
-        "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f"
+  // "explorer.autoReveal": false,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "git.confirmSync": false,
+  "breadcrumbs.enabled": true,
+  "html.mirrorCursorOnMatchingTag": false,
+  "vim.disableAnnoyingNeovimMessage": true,
+  "zentabs.maximumOpenedTabs": 10,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {},
+  // "vim.enableNeovim": true,
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // {
+    //     "before": [":"],
+    //     "commands": [
+    //         "workbench.action.showCommands",
+    //     ]
+    // },
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.openNextRecentlyUsedEditorInGroup"]
     },
-    "html.format.wrapAttributes": "force-aligned",
-    "explorer.confirmDragAndDrop": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "editor.detectIndentation": false,
-    "explorer.confirmDelete": false,
-    "editor.renderWhitespace": "all",
-    "todo-tree.highlights.enabled": true,
-    "editor.multiCursorModifier": "ctrlCmd"
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.openPreviousRecentlyUsedEditorInGroup"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "S"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.splitEditorOrthogonal"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "Q"],
+      "commands": ["workbench.action.files.save", "workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "v"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.focus"]
+    },
+    // keep gh for the tooltip toggle
+    // {
+    //     "before": ["g", "h"],
+    //     "commands": [
+    //         "cursorHome",
+    //     ]
+    // },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["g", "j"],
+      "commands": ["cursorBottom"]
+    },
+    {
+      "before": ["g", "k"],
+      "commands": ["cursorTop"]
+    },
+    {
+      "before": ["g", "l"],
+      "commands": ["cursorEnd"]
+    },
+    // {
+    //   "before": ["<leader>", "m"],
+    //   "commands": ["bookmarks.toggle"]
+    // },
+    {
+      "before": ["<leader>", "N"],
+      "commands": ["workbench.action.files.newUntitledFile",]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.action.nextEditorInGroup",]
+// workbench.action.openPreviousRecentlyUsedEditor
+// workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup
+// workbench.action.quickOpenLeastRecentlyUsedEditorInGroup
+//  "workbench.action.quickOpenNavigatePreviousInEditorPicker"
+
+    },
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["workbench.action.previousEditorInGroup"]
+// workbench.action.openNextRecentlyUsedEditor
+    },
+
+    // {
+    //   "before": ["<leader>", "b"],
+    //   "commands": ["bookmarks.list"]
+    // }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    }
+  ],
+  "files.autoSave": "onWindowChange",
+  "editor.minimap.enabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "vim.foldfix": true,
+  "http.proxy": "http://proxy-web.micron.com:80",
+  "http.proxyStrictSSL": false,
+  "typescript.tsserver.log": "off",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
+  },
+  "explorer.confirmDragAndDrop": false,
+"typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "editor.renderWhitespace": "all",
+  "todo-tree.highlights.enabled": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.rulers": [120],
+  "git.enableSmartCommit": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "yaml.schemas": {
+    "file:///c%3A/Users/jpitkin/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.jqlList": [
+    {
+      "id": "7a9ab541-27aa-4054-b6e8-6afababdc87e",
+      "enabled": true,
+      "name": "My jira.micron.com Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "jira.micron.com",
+      "monitor": true
+    }
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "rest-client.logLevel": "verbose",
+  "html.autoClosingTags": false,
+  "extensions.ignoreRecommendations": true,
+  "atlascode.jira.enabled": false,
+  "atlascode.bitbucket.enabled": false,
+  "vs-kubernetes": {
+    "vs-kubernetes.helm-path.windows": "c:\\users\\jpitkin\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+    "vs-kubernetes.minikube-path.windows": "c:\\users\\jpitkin\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe"
+  },
+  "angular.experimental-ivy": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.cursorStyle": "line",
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.tabSize": 2,
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  // "terminal.integrated.fontFamily": "Delugia Mono Nerd Font",
+  // "terminal.integrated.fontFamily": "monospace",
+  // "terminal.integrated.letterSpacing": 1,
+  "remote.WSL.server.connectThroughLocalhost": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.shell.linux": "zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "zsh",
+  "terminal.integrated.automationShell.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "zsh"
+    },
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    },
+    "zsh (2)": {
+      "path": "/usr/bin/zsh"
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "/bin/bash (migrated)": {
+      "path": "/bin/bash",
+      "args": []
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "omnisharp.useModernNet": false,
 }
