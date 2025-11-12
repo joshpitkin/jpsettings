@@ -96,13 +96,6 @@ ToggleWinMinimize(TheWindowTitle,NotWindowTitle)
 :o:ngsl::ng serve libdev --host 0.0.0.0
 :o:ngs::ng serve --host 0.0.0.0 --hmr
 :o:ngs1::ng serve --host 0.0.0.0 --port 4100
-:o:ocl3::oc login https://bo-ose-test.micron.com:8443
-:o:ocl::oc login https://api.ose-dev45.micron.com:6443
-:o:oct::TOKEN=``oc whoami -t``
-:o:octt::echo $TOKEN | docker login --password-stdin -u unused docker-registry-default.bo-ose-test.micron.com
-:o:drix::iteng-docker-dev.boartifactory.micron.com
-:o:dri::iteng-docker-dev.boartifactory.micron.com/omelek/
-:o:dro::docker-registry-default.bo-ose-test.micron.com
 :o:dvp::docker volume prune --force
 :o:dip::docker image prune --force
 :o:dcp::docker container prune --force
