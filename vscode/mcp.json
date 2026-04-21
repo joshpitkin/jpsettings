@@ -23,6 +23,15 @@
 			],
 			"gallery": "https://api.mcp.github.com",
 			"version": "0.0.1-seed"
+		},
+		"chrome-devtools": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"chrome-devtools-mcp@latest",
+				"--executablePath",
+				"/usr/bin/chromium"
+			]
 		}
 	},
 	"inputs": [

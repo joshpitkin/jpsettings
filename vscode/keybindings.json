@@ -5,6 +5,10 @@
     "command": "workbench.action.files.openFolder"
   },
   {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft"
   },
