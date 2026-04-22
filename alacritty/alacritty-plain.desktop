@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Alacritty (plain)
+Comment=Terminal with plain zsh — for SSH / remote sessions
+Exec=/home/jpitkin/.local/bin/alacritty-plain
+Icon=Alacritty
+Categories=System;TerminalEmulator;

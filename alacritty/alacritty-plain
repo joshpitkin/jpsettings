@@ -1,0 +1,3 @@
+#!/bin/bash
+# Launch Alacritty with plain zsh — for SSH / remote sessions
+exec alacritty -e zsh

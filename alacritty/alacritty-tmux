@@ -1,0 +1,3 @@
+#!/bin/bash
+# Launch Alacritty with tmux — for local work sessions
+exec alacritty -e tmux new-session -A -s main

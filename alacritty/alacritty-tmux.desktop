@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Alacritty (tmux)
+Comment=Terminal with tmux — for local work
+Exec=/home/jpitkin/.local/bin/alacritty-tmux
+Icon=Alacritty
+Categories=System;TerminalEmulator;
