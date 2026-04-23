@@ -519,3 +519,6 @@ tmux_conf_uninstall_plugins_on_reload=true
 # # /!\ do not remove the previous line
 # #     do not write below this line
 #
+
+# sessionizer — Ctrl-f to fuzzy-jump to a project
+bind-key -r f run-shell "tmux neww ~/bin/tmux-sessionizer"
