@@ -1,0 +1,328 @@
+{
+  // oh-my-opencode-slim configuration
+  // JSONC takes precedence over oh-my-opencode-slim.json
+  // Switch presets at runtime with: /preset <name>
+  // Ping all agents to verify: ping all agents
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+
+  // Active preset — options: copilot-lean | copilot-balanced | copilot-power | openrouter-budget | openrouter-fast | openai
+  "preset": "copilot-balanced",
+
+  "presets": {
+
+    // ── copilot-lean ─────────────────────────────────────────────────────────
+    // Small / budget-optimized preset (GitHub Copilot only)
+    // Post-June 1 2026 all agents: 0.33x except oracle (1x)
+    // Good for: routine coding, quick iterations, token-conscious sessions
+    //
+    //  Agent         Model                        Post-Jun Multiplier
+    //  orchestrator  gpt-4.1         (OpenAI)     0.33x
+    //  oracle        gemini-2.5-pro  (Google)     1x      ← best value reasoning
+    //  explorer      gpt-5-mini      (OpenAI)     0.33x
+    //  librarian     claude-haiku-4.5(Anthropic)  0.33x
+    //  designer      gemini-3-flash  (Google)     0.33x
+    //  fixer         gpt-4.1         (OpenAI)     0.33x
+    "copilot-lean": {
+      "orchestrator": {
+        "model": "github-copilot/gpt-4.1",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "github-copilot/gemini-2.5-pro",
+        "variant": "high",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "explorer": {
+        "model": "github-copilot/gpt-5-mini",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "github-copilot/claude-haiku-4.5",
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "designer": {
+        "model": "github-copilot/gemini-3-flash-preview",
+        "variant": "medium",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "github-copilot/gpt-4.1",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      }
+    },
+
+    // ── copilot-balanced ─────────────────────────────────────────────────────
+    // Medium / sweet-spot preset (GitHub Copilot only)  ← RECOMMENDED DEFAULT
+    // Exploits the two 1x models that stay cheapest after June 1 2026:
+    //   claude-sonnet-4 and gemini-2.5-pro (both remain 1x while 4.5/4.6 jump to 6x+)
+    //
+    //  Agent         Model                        Post-Jun Multiplier
+    //  orchestrator  claude-sonnet-4 (Anthropic)  1x      ← stays 1x! (4.6 = 9x)
+    //  oracle        gemini-2.5-pro  (Google)     1x      ← stays 1x!
+    //  explorer      gpt-5-mini      (OpenAI)     0.33x
+    //  librarian     gpt-4.1         (OpenAI)     0.33x
+    //  designer      gemini-3-flash  (Google)     0.33x
+    //  fixer         gpt-5.2         (OpenAI)     3x      ← step-up for code quality
+    "copilot-balanced": {
+      "orchestrator": {
+        "model": "github-copilot/claude-sonnet-4",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "github-copilot/gemini-2.5-pro",
+        "variant": "high",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "explorer": {
+        "model": "github-copilot/gpt-5-mini",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "github-copilot/gpt-4.1",
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "designer": {
+        "model": "github-copilot/gemini-3-flash-preview",
+        "variant": "medium",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "github-copilot/gpt-5.2",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      }
+    },
+
+    // ── copilot-power ────────────────────────────────────────────────────────
+    // Large / premium-quality preset (GitHub Copilot only)
+    // Use for critical architecture work, hard debugging, complex multi-file
+    // refactors where quality matters more than cost.
+    //
+    //  Agent         Model                           Post-Jun Multiplier
+    //  orchestrator  gpt-5.5          (OpenAI)       token-based ($5/$30/M)
+    //  oracle        claude-sonnet-4.6(Anthropic)    6x  high variant
+    //  explorer      gpt-4.1          (OpenAI)       0.33x  ← stay cheap for scouting
+    //  librarian     gemini-3.1-pro   (Google)       6x  ← long-context doc retrieval
+    //  designer      gemini-2.5-pro   (Google)       1x  ← best value for UI/UX
+    //  fixer         gpt-5.2-codex    (OpenAI)       3x  ← coding specialist
+    "copilot-power": {
+      "orchestrator": {
+        "model": "github-copilot/gpt-5.5",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "github-copilot/claude-sonnet-4.6",
+        "variant": "high",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "explorer": {
+        "model": "github-copilot/gpt-4.1",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "github-copilot/gemini-3.1-pro-preview",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "designer": {
+        "model": "github-copilot/gemini-2.5-pro",
+        "variant": "medium",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "github-copilot/gpt-5.2-codex",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      }
+    },
+
+    // ── openrouter-budget ────────────────────────────────────────────────────
+    // Ultra-low cost OpenRouter preset — free tiers + near-free paid models
+    // Requires: OPENROUTER_API_KEY env var (already configured)
+    // All models have tool_call=true (required for complex dev tasks)
+    //
+    // Good for: exploratory sessions, low-stakes tasks, token-constrained budgets
+    //
+    //  Agent         Model                              Approx Cost/1M
+    //  orchestrator  kimi-k2.6    (Moonshot AI)         ~$0.12/$0.30 in/out
+    //  oracle        deepseek-v3.2(DeepSeek)            ~$0.27/$1.10 in/out
+    //  explorer      gpt-oss-20b  (OpenAI, free)        FREE
+    //  librarian     gemma-4-26b  (Google, free)        FREE
+    //  designer      devstral-small-2507 (Mistral)      very cheap
+    //  fixer         mimo-v2-flash(Xiaomi)              ~$0.09/$0.29 in/out
+    "openrouter-budget": {
+      "orchestrator": {
+        "model": "openrouter/moonshotai/kimi-k2.6",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "openrouter/deepseek/deepseek-v3.2",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "explorer": {
+        "model": "openrouter/openai/gpt-oss-20b:free",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "openrouter/google/gemma-4-26b-a4b-it:free",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "designer": {
+        "model": "openrouter/mistralai/devstral-small-2507",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "openrouter/xiaomi/mimo-v2-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      }
+    },
+
+    // ── openrouter-fast ──────────────────────────────────────────────────────
+    // Low-cost paid OpenRouter preset — speed + coding focus
+    // Stronger than openrouter-budget, still inexpensive.
+    //
+    // Good for: serious dev work on a tight credits budget
+    //
+    //  Agent         Model                              Notes
+    //  orchestrator  qwen3-coder  (Qwen/Alibaba)       coding-specialized model
+    //  oracle        kimi-k2.6    (Moonshot AI)         strong reasoning + long ctx
+    //  explorer      glm-4.7-flash(ZAI/Zhipu)          fast and cheap
+    //  librarian     gemini-2.5-flash (Google)         great at retrieval/context
+    //  designer      devstral-medium-2507 (Mistral)    better UI reasoning
+    //  fixer         deepseek-v4-flash (DeepSeek)      fast targeted code fixes
+    "openrouter-fast": {
+      "orchestrator": {
+        "model": "openrouter/qwen/qwen3-coder",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "openrouter/moonshotai/kimi-k2.6",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "explorer": {
+        "model": "openrouter/z-ai/glm-4.7-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "openrouter/google/gemini-2.5-flash",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "designer": {
+        "model": "openrouter/mistralai/devstral-medium-2507",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "openrouter/deepseek/deepseek-v4-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      }
+    },
+
+    // ── openai (legacy / direct OpenAI key required) ─────────────────────────
+    // Kept for reference. Requires direct OpenAI API access (not via OpenRouter).
+    // Note: ANTHROPIC_BASE_URL override does NOT affect openai/ provider calls.
+    "openai": {
+      "orchestrator": {
+        "model": "openai/gpt-5.5",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "openai/gpt-5.5",
+        "variant": "high",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "openai/gpt-5.4-mini",
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": "openai/gpt-5.4-mini",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": "openai/gpt-5.4-mini",
+        "variant": "medium",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "openai/gpt-5.4-mini",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      }
+    }
+  },
+
+  // ── Council ────────────────────────────────────────────────────────────────
+  // Council runs models in PARALLEL — use deliberately, not for every task.
+  // Trigger manually: @council <your question>
+  // Switch council preset at runtime: @council use lean <question>
+  "council": {
+    "default_preset": "balanced",
+    "presets": {
+      // Lean council: all 0.33x Copilot models
+      "lean": {
+        "alpha": { "model": "github-copilot/claude-haiku-4.5" },
+        "beta":  { "model": "github-copilot/gemini-3-flash-preview" },
+        "gamma": { "model": "github-copilot/gpt-4.1" }
+      },
+      // Balanced council: 1x models only — best value multi-model deliberation
+      "balanced": {
+        "alpha": { "model": "github-copilot/claude-sonnet-4" },
+        "beta":  { "model": "github-copilot/gemini-2.5-pro" },
+        "gamma": { "model": "github-copilot/gpt-5.2" }
+      },
+      // Power council: premium multi-model (use sparingly)
+      "power": {
+        "alpha": { "model": "github-copilot/claude-sonnet-4.6", "variant": "high" },
+        "beta":  { "model": "github-copilot/gemini-3.1-pro-preview" },
+        "gamma": { "model": "github-copilot/gpt-5.5" }
+      }
+    }
+  }
+}
