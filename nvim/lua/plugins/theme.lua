@@ -1,0 +1,1 @@
+/home/jpitkin/.config/omarchy/current/theme/neovim.lua
